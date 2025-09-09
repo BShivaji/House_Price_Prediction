@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input {
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://via.placeholder.com/300x200?text=House+Image" alt="House Image">
+    <h1>House Price Prediction</h1>
+    <form id="predictionForm">
+        <input type="text" id="input1" placeholder="Input 1">
+        <input type="text" id="input2" placeholder="Input 2">
+        <input type="text" id="input3" placeholder="Input 3">
+        <input type="text" id="input4" placeholder="Input 4">
+        <input type="text" id="input5" placeholder="Input 5">
+        <input type="text" id="input6" placeholder="Input 6">
+        <input type="text" id="input7" placeholder="Input 7">
+        <button type="submit">Predict Price</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        document.getElementById('predictionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Simulate prediction
+            const result = 'Predicted Price: $' + Math.floor(Math.random() * 1000000);
+            document.getElementById('result').innerText = result;
+        });
+    </script>
+</body>
+</html>
